@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.main {
+  width: 100%;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  padding: 1rem 3rem;
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* LOGO */
+.navigation .navigation__logo {
+  /* height: 80px; */
+}
+
+.navigation .navigation__logo .navigation__logo__text {
+  letter-spacing: 0.75px;
+  font-weight: 800;
+  color: #0a157a;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* MAIN NAV */
+.navigation .navigation__main {
+  display: block;
+  flex-grow: 1;
+}
+
+.navigation .navigation__main .navigation__main__list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.navigation__main__list .navigation__main__list__item {
+  padding: 0.5rem 1rem;
+  color: #74768f;
+  position: relative;
+}
+
+.navigation__main__list .navigation__main__list__item:after {
+  content: "";
+  position: absolute;
+  background: #0a157a;
+  left: 50%;
+  transform: translate(-50%);
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.navigation__main__list .navigation__main__list__item:hover:after {
+  opacity: 1;
+}
+
+.navigation__main__list
+  .navigation__main__list__item
+  .navigation__main__list__item__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* RE-USE */
+.navigation__main__list__item:hover {
+  cursor: pointer;
+}
+
+/* SIDEBAR NAV */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navigation .navigation__main {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .navigation .navigation__main {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .navigation .navigation__main {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navigation .navigation__main {
+    display: block;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
