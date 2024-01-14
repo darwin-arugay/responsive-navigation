@@ -28,8 +28,31 @@
             <li class="header__nav-item">
               <a href="#" class="header__nav-link">Home</a>
             </li>
-            <li class="header__nav-item">
+            <li class="header__nav-item header__nav-item--with-subnav">
               <a href="#" class="header__nav-link">Projects</a>
+              <img
+                src="./assets/icons/chevron_down.svg"
+                class="header__chevron-icon header__chevron-icon--down"
+              />
+              <img
+                src="./assets/icons/chevron_up.svg"
+                class="header__chevron-icon header__chevron-icon--up"
+              />
+              <nav class="header__subnav">
+                <ul class="header__subnav-list">
+                  <li class="header__subnav-item">
+                    <a href="#" class="header__subnav-link">Youtube clone</a>
+                  </li>
+                  <li class="header__subnav-item">
+                    <a href="#" class="header__subnav-link">Facebook clone</a>
+                  </li>
+                  <li class="header__subnav-item">
+                    <a href="#" class="header__subnav-link"
+                      >Financial budget tracker</a
+                    >
+                  </li>
+                </ul>
+              </nav>
             </li>
             <li class="header__nav-item header__nav-item--with-subnav">
               <a href="#" class="header__nav-link">Services</a>
@@ -60,7 +83,9 @@
               <a href="#" class="header__nav-link">About Us</a>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Contact Us</a>
+              <button href="#" class="header__nav-link button button--outlined">
+                Contact Us
+              </button>
             </li>
           </ul>
         </nav>
