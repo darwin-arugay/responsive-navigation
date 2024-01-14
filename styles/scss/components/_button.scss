@@ -1,0 +1,20 @@
+.button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: inherit;
+  border: 1px solid $blue;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
+
+  &--outlined {
+    background-color: $white;
+    color: $baseFontColor;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+      outline: 1px solid transparent;
+    }
+  }
+}
