@@ -12,7 +12,7 @@
     />
 
     <title>Responsive nav</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/css/styles.css" />
   </head>
   <body>
     <main>
@@ -31,8 +31,30 @@
             <li class="header__nav-item">
               <a href="#" class="header__nav-link">Projects</a>
             </li>
-            <li class="header__nav-item">
+            <li class="header__nav-item header__nav-item--with-subnav">
               <a href="#" class="header__nav-link">Services</a>
+              <img
+                src="./assets/icons/chevron_down.svg"
+                class="header__chevron-icon header__chevron-icon--down"
+              />
+              <img
+                src="./assets/icons/chevron_up.svg"
+                class="header__chevron-icon header__chevron-icon--up"
+              />
+              <nav class="header__subnav">
+                <ul class="header__subnav-list">
+                  <li class="header__subnav-item">
+                    <a href="#" class="header__subnav-link"
+                      >Frontend Development</a
+                    >
+                  </li>
+                  <li class="header__subnav-item">
+                    <a href="#" class="header__subnav-link"
+                      >Backend Development</a
+                    >
+                  </li>
+                </ul>
+              </nav>
             </li>
             <li class="header__nav-item">
               <a href="#" class="header__nav-link">About Us</a>
