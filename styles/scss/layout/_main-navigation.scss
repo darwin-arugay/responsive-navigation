@@ -1,0 +1,201 @@
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: $white;
+  border-bottom: 1px solid $borderColor;
+
+  // LOGO /
+  &__logo {
+    cursor: pointer;
+
+    &-text {
+      letter-spacing: 0.75px;
+      font-weight: $bolderFontWeight;
+      color: $blue;
+      font-size: $mediumFontSize;
+      margin: 0;
+    }
+  }
+
+  &__nav {
+    /* MAIN NAV */
+    &--main {
+      display: block;
+      flex-grow: 1;
+    }
+
+    &-list {
+      // list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      font-weight: $boldFontWeight;
+      font-size: $baseFontSize;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-link {
+      position: relative;
+    }
+
+    &-item {
+      padding: 0.5rem 1rem;
+      color: $baseFontColor;
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        background: #0a157a;
+        left: 50%;
+        transform: translate(-50%);
+        height: 5px;
+        width: 5px;
+        border-radius: 100%;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 1s;
+      }
+
+      &:hover:after {
+        opacity: 1;
+      }
+      &--with-subnav:hover:after {
+        opacity: 0;
+      }
+
+      &--with-subnav {
+        display: flex;
+
+        .header__chevron-icon {
+          margin-left: 8px;
+          &--down {
+            display: block;
+          }
+
+          &--up {
+            display: none;
+          }
+        }
+
+        // SHOW SUBNAV
+        &:hover {
+          .header__subnav {
+            display: block;
+            opacity: 1;
+          }
+
+          .header__chevron-icon {
+            &--down {
+              display: none;
+            }
+
+            &--up {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // SUBNAV INSIDE THE MAIN NAV
+  &__subnav {
+    background-color: $white;
+    opacity: 0;
+    display: none;
+    box-shadow: 1px 2px 3px 1px $borderColor;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0.5rem 1rem;
+    transition: all 1s;
+    width: fit-content;
+    border-radius: 3px;
+    z-index: 1;
+    transition: opacity 0.5s;
+    animation: move-subnav-up 1s 0.25 ease-in;
+
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+      color: $baseFontColor;
+      display: inline-block;
+      white-space: nowrap;
+      padding: 0.5rem 0;
+
+      &:hover {
+        background-color: $borderColor;
+        margin: 0 -1rem;
+        padding: 0.5rem 1rem;
+        transition: background-color 1s 0.1s;
+      }
+    }
+
+    &-link {
+    }
+  }
+}
+
+@keyframes move-subnav-up {
+  0% {
+    top: 100%;
+  }
+
+  80% {
+    top: 99%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: $smallBreakpoint) {
+  .navigation.navigation--main {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: $smallBreakpoint) {
+  .navigation .navigation--main {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $mediumBreakpoint) {
+  .navigation.navigation--main {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: $largeBreakpoint) {
+  .navigation.navigation--main {
+    display: block;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: $extraLargeBreakpoint) {
+}

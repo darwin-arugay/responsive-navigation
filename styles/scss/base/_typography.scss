@@ -1,0 +1,15 @@
+html {
+  font-family: "Poppins", sans-serif;
+  font-weight: $baseFontWeight;
+  font-size: $baseFontSize;
+  color: $baseFontColor;
+  line-height: $baseLineHeight;
+
+  @media only screen and (min-width: $smallBreakpoint) {
+    font-size: $extraSmallFontSize;
+  }
+
+  @media only screen and (min-width: $largeBreakpoint) {
+    font-size: $baseFontSize;
+  }
+}
