@@ -1,0 +1,12 @@
+{
+  "name": "responsive-navigation",
+  "version": "1.0.0",
+  "description": "This project is only for responsive navigation for practice my CSS skill only",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "node-sass --watch styles/scss/styles.scss styles/css/styles.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
