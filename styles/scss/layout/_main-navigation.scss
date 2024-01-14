@@ -3,6 +3,10 @@
   height: 100%;
 }
 
+// TODO:
+// 1. Fix transitions in chevron icon and subnav
+// 2. On hover list item with button remove the pseudo after element
+
 .header {
   width: 100%;
   display: flex;
@@ -35,7 +39,9 @@
     &-list {
       // list-style: none;
       display: flex;
+      flex-direction: row;
       justify-content: flex-end;
+      align-items: center;
       font-weight: $boldFontWeight;
       font-size: $baseFontSize;
       margin: 0;
@@ -121,7 +127,6 @@
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 0.5rem 1rem;
     transition: all 1s;
     width: fit-content;
     border-radius: 3px;
@@ -139,12 +144,11 @@
       color: $baseFontColor;
       display: inline-block;
       white-space: nowrap;
-      padding: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      width: 100%;
 
       &:hover {
         background-color: $borderColor;
-        margin: 0 -1rem;
-        padding: 0.5rem 1rem;
         transition: background-color 1s 0.1s;
       }
     }
